@@ -12,7 +12,7 @@ Użytkownicy (uczniowie, pasjonaci historii, gracze) potrzebują szybkiego i prz
 ### Grupa docelowa
 - Uczniowie szkół podstawowych i średnich – wiedza do nauki/prezentacji
 - Pasjonaci historii wojskowości – szybkie przypomnienie kluczowych danych
-- Gracze gier wojennych (np. World of Tanks) – realne odpowiedniki czołgów z gry
+- Gracze gier wojennych – realne odpowiedniki czołgów z gry
 
 ### Struktura strony
 Strona prowadzi użytkownika w logicznej kolejności: najpierw wprowadzenie (co to za strona), potem kontekst (dlaczego czołgi były ważne), dalej konkretne czołgi, później oś czasu, a na końcu kontakt. Dzięki temu użytkownik nie gubi się i dostaje informacje we właściwej kolejności.
@@ -30,21 +30,27 @@ Strona prowadzi użytkownika w logicznej kolejności: najpierw wprowadzenie (co 
 ### Struktura folderów
 
 tanks-app/
+│
 ├── public/
-│ └── index.html
+│   └── index.html
+│
 ├── src/
-│ ├── assets/ # Obrazy
-│ ├── components/ # Komponenty React
-│ │ ├── Header.jsx
-│ │ ├── Hero.jsx
-│ │ ├── Overview.jsx
-│ │ ├── Tanks.jsx
-│ │ ├── Timeline.jsx
-│ │ ├── Resources.jsx
-│ │ └── Footer.jsx
-│ ├── App.js # Główny komponent
-│ ├── App.css # Wszystkie style globalne
-│ └── index.js 
+│   ├── assets/
+│   │   └── (obrazy: tiger.webp, t34.webp, sherman.webp, tiger1.webp)
+│   │
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Overview.jsx
+│   │   ├── Tanks.jsx
+│   │   ├── Timeline.jsx
+│   │   ├── Resources.jsx
+│   │   └── Footer.jsx
+│   │
+│   ├── App.js
+│   ├── App.css
+│   └── index.js
+│
 ├── package.json
 └── README.md
 
@@ -68,6 +74,10 @@ tanks-app/
 
 npm install   
 npm start     
+
+### Google Lighthouse
+
+![lighthouse](src/assets/lighthouse.png)
 
 ### Figma
 link: https://www.figma.com/design/cvvhi77V2IWJyb13ixa73T/Untitled?node-id=0-1&t=p9oQoLHrv0p2zpZc-1
