@@ -67,9 +67,9 @@ Strona prowadzi użytkownika w logicznej kolejności: najpierw wprowadzenie (co 
 
 ### Uruchomienie projektu:
 
-git clone https://github.com/NeQ34/TanksApp.git
-npm install   
-npm start     
+- git clone https://github.com/NeQ34/TanksApp.git
+- npm install   
+- npm start     
 
 ### Google Lighthouse
 
