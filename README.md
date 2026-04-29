@@ -29,13 +29,13 @@ Strona prowadzi użytkownika w logicznej kolejności: najpierw wprowadzenie (co 
 
 ### Struktura folderów
 
-tanks-app/
-  public/
+tanks-app;
+  public:
     - index.html
-  src/
-    assets/
+  src:
+    assets:
       - obrazy (tiger.webp, t34.webp, sherman.webp, tiger1.webp, lighthouse.jpg)
-    components/
+    components:
       - Header.jsx
       - Hero.jsx
       - Overview.jsx
