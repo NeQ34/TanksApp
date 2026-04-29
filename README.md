@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Czołgi II Wojny Światowej – projekt zaliczeniowy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Strona internetowa prezentująca najważniejsze czołgi II wojny światowej. Projekt wykonany w React jako strona jednostronicowa (SPA).
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Analiza UX
 
-### `npm start`
+### Potrzeba użytkownika
+Użytkownicy (uczniowie, pasjonaci historii, gracze) potrzebują szybkiego i przejrzystego przeglądu czołgów II wojny światowej – bez rozproszonych, przegadanych artykułów.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Grupa docelowa
+- Uczniowie szkół podstawowych i średnich – zwięzła wiedza do nauki/prezentacji
+- Pasjonaci historii wojskowości – szybkie przypomnienie kluczowych danych
+- Gracze gier wojennych (np. World of Tanks) – realne odpowiedniki czołgów z gry
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Struktura strony
+Strona prowadzi użytkownika krok po kroku: od wprowadzenia (Hero), przez kontekst (Przegląd), przez konkretne czołgi, po chronologię. Kontakt na końcu umożliwia zadanie pytania.
 
-### `npm test`
+### Kolorystyka i układ
+- **Ciemne gradientowe tło** – oddaje ciężki klimat wojny, jednocześnie zapewnia kontrast dla tekstu
+- **Pomarańczowy akcent** – przyciąga wzrok do przycisków i ważnych elementów
+- **Karty i siatki** – grupują informacje w małe, strawne porcje
+- **Responsywność** – na desktop 3 kolumny (porównanie), na mobile 1 kolumna (wygodne przewijanie)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Dokumentacja techniczna (krótko)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Struktura folderów
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Podział plików HTML, CSS i JS
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Typ | Pliki | Rola |
+|-----|-------|------|
+| HTML | `public/index.html` | Tylko `<div id="root">` – resztę generuje React |
+| CSS | `src/App.css` | Wszystkie style w jednym pliku (zmienne, layout, responsywność) |
+| JS/JSX | `src/App.js` + `components/*` | Logika, struktura, interakcje (menu mobilne) |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Główne komponenty
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Komponent | Co robi |
+|-----------|---------|
+| `Header` | Sticky nawigacja, logo, menu hamburger na mobile |
+| `Hero` | Sekcja powitalna, tytuł, przyciski, zdjęcie Tigera |
+| `Overview` | Trzy karty – rola czołgów w wojnie |
+| `Tanks` | Galeria 3 czołgów (T-34, Sherman, Tiger I) |
+| `Timeline` | Oś czasu (1939–1945) |
+| `Resources` | Formularz kontaktowy (UI, brak wysyłki) |
+| `Footer` | Stopka i link "Powrót na górę" |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Przygotowanie pod backend
 
-## Learn More
+Obecnie strona używa **danych statycznych** (teksty i obrazy na sztywno w komponentach). Aby podłączyć backend:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Formularz** – dodać wysyłkę POST do `/api/contact`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Uruchomienie projektu:
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+npm install   
+npm start     
