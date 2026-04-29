@@ -1,59 +1,66 @@
 # Czołgi II Wojny Światowej – projekt zaliczeniowy
 
-Strona internetowa prezentująca najważniejsze czołgi II wojny światowej. Projekt wykonany w React jako strona jednostronicowa (SPA).
+Strona internetowa prezentująca najważniejsze czołgi II wojny światowej. Projekt wykonany w React.
 
 ---
 
 ## Analiza UX
 
 ### Potrzeba użytkownika
-Użytkownicy (uczniowie, pasjonaci historii, gracze) potrzebują szybkiego i przejrzystego przeglądu czołgów II wojny światowej – bez rozproszonych, przegadanych artykułów.
+Użytkownicy (uczniowie, pasjonaci historii, gracze) potrzebują szybkiego i przejrzystego przeglądu czołgów II wojny światowej, bez rozproszonych, przegadanych artykułów.
 
 ### Grupa docelowa
-- Uczniowie szkół podstawowych i średnich – zwięzła wiedza do nauki/prezentacji
+- Uczniowie szkół podstawowych i średnich – wiedza do nauki/prezentacji
 - Pasjonaci historii wojskowości – szybkie przypomnienie kluczowych danych
 - Gracze gier wojennych (np. World of Tanks) – realne odpowiedniki czołgów z gry
 
 ### Struktura strony
-Strona prowadzi użytkownika krok po kroku: od wprowadzenia (Hero), przez kontekst (Przegląd), przez konkretne czołgi, po chronologię. Kontakt na końcu umożliwia zadanie pytania.
+Strona prowadzi użytkownika w logicznej kolejności: najpierw wprowadzenie (co to za strona), potem kontekst (dlaczego czołgi były ważne), dalej konkretne czołgi, później oś czasu, a na końcu kontakt. Dzięki temu użytkownik nie gubi się i dostaje informacje we właściwej kolejności.
 
 ### Kolorystyka i układ
-- **Ciemne gradientowe tło** – oddaje ciężki klimat wojny, jednocześnie zapewnia kontrast dla tekstu
-- **Pomarańczowy akcent** – przyciąga wzrok do przycisków i ważnych elementów
-- **Karty i siatki** – grupują informacje w małe, strawne porcje
-- **Responsywność** – na desktop 3 kolumny (porównanie), na mobile 1 kolumna (wygodne przewijanie)
+- **Ciemne gradientowe tło** – nawiązuje do wojennego klimatu, a jednocześnie jasny tekst dobrze się na nim czyta.
+- **Pomarańczowy akcent** – wyróżnia przyciski i najważniejsze elementy, dzięki czemu użytkownik od razu widzi, gdzie kliknąć.
+- **Karty i siatki** – informacje są podzielone na małe, czytelne bloki, co ułatwia szybkie przyswojenie treści i nie przytłacza użytkownika.
+- **Responsywność** – na komputerze czołgi są wyświetlane w trzech kolumnach, co pozwala łatwo je porównać. Na telefonie układ zmienia się w jedną kolumnę, wygodną do przewijania palcem.
 
 ---
 
-## Dokumentacja techniczna (krótko)
+## Dokumentacja techniczna
 
 ### Struktura folderów
 
-
-
-### Podział plików HTML, CSS i JS
-
-| Typ | Pliki | Rola |
-|-----|-------|------|
-| HTML | `public/index.html` | Tylko `<div id="root">` – resztę generuje React |
-| CSS | `src/App.css` | Wszystkie style w jednym pliku (zmienne, layout, responsywność) |
-| JS/JSX | `src/App.js` + `components/*` | Logika, struktura, interakcje (menu mobilne) |
+tanks-app/
+├── public/
+│ └── index.html
+├── src/
+│ ├── assets/ # Obrazy
+│ ├── components/ # Komponenty React
+│ │ ├── Header.jsx
+│ │ ├── Hero.jsx
+│ │ ├── Overview.jsx
+│ │ ├── Tanks.jsx
+│ │ ├── Timeline.jsx
+│ │ ├── Resources.jsx
+│ │ └── Footer.jsx
+│ ├── App.js # Główny komponent
+│ ├── App.css # Wszystkie style globalne
+│ └── index.js 
+├── package.json
+└── README.md
 
 ### Główne komponenty
 
-| Komponent | Co robi |
+| Komponent | Rola |
 |-----------|---------|
 | `Header` | Sticky nawigacja, logo, menu hamburger na mobile |
-| `Hero` | Sekcja powitalna, tytuł, przyciski, zdjęcie Tigera |
+| `Hero` | Sekcja powitalna, tytuł, przyciski |
 | `Overview` | Trzy karty – rola czołgów w wojnie |
-| `Tanks` | Galeria 3 czołgów (T-34, Sherman, Tiger I) |
-| `Timeline` | Oś czasu (1939–1945) |
-| `Resources` | Formularz kontaktowy (UI, brak wysyłki) |
+| `Tanks` | Galeria 3 czołgów |
+| `Timeline` | Oś czasu|
+| `Resources` | Formularz kontaktowy |
 | `Footer` | Stopka i link "Powrót na górę" |
 
 ### Przygotowanie pod backend
-
-Obecnie strona używa **danych statycznych** (teksty i obrazy na sztywno w komponentach). Aby podłączyć backend:
 
 **Formularz** – dodać wysyłkę POST do `/api/contact`
 
@@ -61,3 +68,9 @@ Obecnie strona używa **danych statycznych** (teksty i obrazy na sztywno w kompo
 
 npm install   
 npm start     
+
+### Figma
+link: https://www.figma.com/design/cvvhi77V2IWJyb13ixa73T/Untitled?node-id=0-1&t=p9oQoLHrv0p2zpZc-1
+
+### Autor
+Mateusz Ćwirta
